@@ -1,0 +1,13 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: isModEnabled(vin_Pregnancy)
+
+    SceneStart()
+    Player:: "TODO: in-character text about not wanting kids."
+    If Player.wantsBabies()
+      Plater.setWantsBabies(false)
+    If Actor.wantsBabies()
+      Actor.setWantsBabies(false)
+    SceneEnd()
