@@ -1,0 +1,6 @@
+MODULE_UNIQUEID: rcbc_NTR
+MODULE_NAME: RCBC's Edited vin_NTR
+MODULE_AUTHOR: rcbcgreenpanzer
+MODULE_LINK: https://github.com/rcbcgreenpanzer/rcbc_Tweaks
+MODULE_DESCRIPTION: RCBC's edits to vin_NTR
+MODULE_REQUIREMENTS: vin_NTR

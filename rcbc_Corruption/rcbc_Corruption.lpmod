@@ -1,0 +1,6 @@
+MODULE_UNIQUEID: rcbc_Corruption
+MODULE_NAME: RCBC's Edited vin_Corruption
+MODULE_AUTHOR: rcbcgreenpanzer
+MODULE_LINK: https://github.com/rcbcgreenpanzer/rcbc_Tweaks
+MODULE_DESCRIPTION: RCBC's edits to vin_Corruption
+MODULE_REQUIREMENTS: vin_Corruption

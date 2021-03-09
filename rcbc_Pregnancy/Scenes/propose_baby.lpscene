@@ -1,0 +1,18 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: none
+OTHER: none
+
+    SceneStart()
+    Player:: "Baby, maybe it's time we should start trying for a baby together."
+    If Actor:attractiontoplayer > 40
+        Actor:: "Oh baby, I've been thinking the same thing ... Yes, let's have a baby together."
+        If !Actor.isMale()
+            Actor.setWantsBabies()
+        If !Player.isMale()
+            Player.setWantsBabies()
+    Else
+        Actor:: "We're still so young, isn't it a bit too soon for that? I'm not sure I'm ready for the reponsibility right now."
+    Endif
+    SceneEnd()
