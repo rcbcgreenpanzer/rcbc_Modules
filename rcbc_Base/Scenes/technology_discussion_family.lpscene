@@ -1,0 +1,30 @@
+WHAT: all, -sleep, -nap
+WHERE: home
+WHEN: 0-24
+WHO: Actor = getRelative(); If Actor.livesWithPlayer() && Actor:age < 40 && Random(50, 200) < Actor:intelligence
+OTHER: isAtHome() && Random(0, 200) < intelligence
+
+    SceneStart()
+    Actor.dress()
+    Actor.show(2)
+    Actor(Excited):: "What do you think about the release of the latest ..."
+    0:: "Play it safe"
+    1:: "Show off my technology knowledge"
+    
+    If 0
+        Player(Happy):: "I'm very excited about it ..."
+        "My knowledge of technology leaves a lot to be desired and I know it. No point trying to sound smart here ..."
+    Else
+        "I tried my best to show off my knowledge of technology to engage in a sophisticated discussion with my <Actor.relationship>."
+        Actor(Happy):: "I'm glad we share the same passion for technology."
+        Actor:rapportwithplayer += Random(0, 2)
+        If Actor:intelligence < intelligence
+            "I brought my <Actor.relationship> up to date on some details of the new ..."
+            Actor:intelligence += Random(0, 2)
+        Elseif Actor:intelligence > intelligence
+            "My <Actor.relationship> brought me up to date on some details of the new ..."
+            intelligence += Random(0, 2)
+    Endif
+    
+    SceneEnd()
+    timeout(500, technology_discussion_family)

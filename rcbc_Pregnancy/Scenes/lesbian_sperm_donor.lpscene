@@ -1,7 +1,7 @@
 WHAT: all
 WHERE: home
 WHEN: 8-22
-WHO: Actor = getRelatedPeople(Spouses, Dating); If !Actor0.isPregnant() && Actor0.isFemale() && !Actor1.isPregnant() && Actor1.isFemale() && [Actor0:rapportwithplayer > 40 || Actor1:rapportwithplayer > 40]
+WHO: Actor = getRelatedPeople(Spouses, Dating); If (!Actor0.isPregnant() || !Actor1.isPregnant()) && Actor0.isFemale() && Actor1.isFemale() && [Actor0:rapportwithplayer > 40 || Actor1:rapportwithplayer > 40]
 OTHER: !Player.isFemale()
 
     // Sperm donor for lesbian couple: with the PC as the donor.
@@ -12,10 +12,12 @@ OTHER: !Player.isFemale()
     Actor1.show()
     "<Actor0.name> and <Actor1.name> are a lesbian couple trying to have a child. I have been asked to be their sperm donor."
     "They don't trust artificial insemination so they insist on a more 'traditional' method."
-    "At least they leave it to me who out of the two of them I want to impregnate."
-    0:: "Impregnate <Actor0.name>"
-    1:: "Impregnate <Actor1.name>"
-    2:: "Impregnate both"
+    If !Actor0.isPregnant() && !Actor1.isPregnant()
+        "At least they leave it to me who out of the two of them I want to impregnate."
+    Endif
+    0:: !Actor0.isPregnant():: "Impregnate <Actor0.name>"
+    1:: !Actor1.isPregnant():: "Impregnate <Actor1.name>"
+    2:: (!Actor0.isPregnant() && !Actor1.isPregnant()):: "Impregnate both"
     3:: "No"
     
     If 0

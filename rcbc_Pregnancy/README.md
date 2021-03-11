@@ -23,8 +23,9 @@ RCBC's edits to vin\_Pregnancy
   * Replace Player.isMale() with !Player.isFemale()
   * Expand guest conditions to allow trans characters.
 * lesbian\_sperm\_donor:
-  * Replace Player.isMale() with !Player.isFemale()
-  * Add option to impregnate both
+  * Expand guest conditions to allow trans characters.
+  * Change scene to support lesbian couples with one member already pregnant.
+  * Add option to both get impregnated (if neither was pregnant before)
 * lesbian\_sperm:
   * Expand guest conditions to allow trans characters.
   * Add option to both get impregnated

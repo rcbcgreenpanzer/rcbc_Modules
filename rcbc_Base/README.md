@@ -2,6 +2,14 @@
 RCBC's tweaks to vin\_Base
 
 * Scenes:
+  * art\_discussion\_family:
+    * Family doesn't judge you for knowing less
+    * If you know less they inform you about things
+    * If you know more you inform them about things
+  * book\_discussion\_family:
+    * Family doesn't judge you for knowing less
+    * If you know less they inform you about things
+    * If you know more you inform them about things
   * cherry\_boy\_cms:
     * Loosen trigger conditions so that actors with existing children and/or
       partners are valid.
@@ -13,8 +21,24 @@ RCBC's tweaks to vin\_Base
   * dating\_sleeping\_sex:
     * Remove restriction on same gender partners
     * Give trans characters an equal chance to be on either side.
+  * job\_interview:
+    * Change < into <= in initial difficulty branch
+    * Adjust age presets
+    * Remove penalty for having better stats than your boss.
+  * music\_discussion\_family:
+    * Family doesn't judge you for knowing less
+    * If you know less they inform you about things
+    * If you know more you inform them about things
   * neighbour\_fixes:
     * Add openRelationship() as an alternative to the stat check for your
       partner to have some fun.
+  * news\_discussion\_family:
+    * Family doesn't judge you for knowing less
+    * If you know less they inform you about things
+    * If you know more you inform them about things
   * surprise\_for\_dating\_gb:
     * Loosen invitation restrictions to allow trans characters.
+  * technology\_discussion\_family:
+    * Family doesn't judge you for knowing less
+    * If you know less they inform you about things
+    * If you know more you inform them about things
