@@ -11,6 +11,8 @@ RCBC's edits to vin\_Pregnancy
   * Consolidate conditions so only one call to Random() is made
   * Add more stats to the mix
   * Expand guest conditions to allow trans characters.
+* checkup\_drive:
+  * Replace Else with Elseif
 * dildo\_impregnate\_cms:
   * Prevent scene from firing is actor is already pregnant.
   * Add shorter timeout when you choose to participate.
@@ -39,6 +41,15 @@ RCBC's edits to vin\_Pregnancy
   * Prevent spouse from making a fuss if they're in a poly
 * NPC\_gives\_birth:
   * They're still a relative, even if they're growing up in another family
+* NPC\_gives\_birth\_neutral:
+  * Rename actors to prevent confusion
+  * Father shows up
+  * Kid will be a relative if either parent is either a relative or a spouse
+  * Currently implemented:
+    * Sibling (either parent is also your parent)
+    * Stepchild (either parent is dating you)
+    * Stepsibling (either parent is your stepparent)
+    * Cousin (temporary default)
 * player\_gives\_birth:
   * Rename variables to keep who is who straight
   * Add both the real father and fake father if they are different.

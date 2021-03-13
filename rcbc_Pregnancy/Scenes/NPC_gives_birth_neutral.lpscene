@@ -1,0 +1,37 @@
+WHAT: none
+WHERE: none
+WHEN: 0 - 24
+WHO: Mother = getSpecific(Impregnated); Father = Mother.getBabyDaddy()
+OTHER: none
+
+    SceneStart()
+    secondScreen(Mother)
+    Mother.endPregnancy()
+    Mother.dress()
+    Mother.show(2)
+    Father.dress()
+    Father.show(3)
+    Mother.setActorVar(tag_Pregnant, 0)
+    If Mother.isRelative() || Father.isRelative() || Mother.isDating() || Father.isDating()
+        Kid = Player.generateRelativeMatchRace()
+        Kid.setLivingWithPlayer(False)
+        If Mother.isRelativeType(Parent) || (Father.isValid() && Father.isRelativeType(Parent))
+            Kid.setRelativeType(Sibling)
+        Elseif Mother.isDating() || Father.isDating()
+            Kid.setRelativeType(Stepchild)
+        Elseif Mother.isRelativeType(Stepparent) || Father.isRelativeType(Stepparent)
+            Kid.setRelativeType(Stepsibling)
+        // Elseif either is a grandparent:
+        //    Kid => aunt/uncle
+        // Elseif either is an aunt/uncle:
+        //    Kid => cousin
+        Else
+            Kid.setRelativeType(Cousin)
+    Else
+        Kid = Mother.generatePersonMatchRace()
+    Kid:age => 0
+    addNpcRelationship(ParentChild, Mother, Kid)
+    addNpcRelationship(ParentChild, Father, Kid)
+    Kid.matchLastName(Mother)
+    "<Mother.name> has recently given birth to a cute baby, whom she named <Kid.name>. Her baby photos are all over Facebook."
+    SceneEnd()

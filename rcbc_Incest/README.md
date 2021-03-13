@@ -37,6 +37,8 @@ RCBC's tweaks to various scenes.
       least the player's.
   * family\_harem\_cms:
     * Replace player.isMale() with !Player.isFemale()
+  * family\_peep:
+    * Bypass stat check if you've already had sex.
   * family\_sit\_on\_lap:
     * Open criteria for Actor from child/stepchild to any relative whose age
       is at most the player's.
