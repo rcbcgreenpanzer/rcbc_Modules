@@ -35,6 +35,10 @@ RCBC's tweaks to various scenes.
   * creepy\_relative\_watches:
     * Replace condition that we haven't had sex with that their age must be at
       least the player's.
+  * drunk\_dad\_cms:
+    * Swap isInterestedIn() from Player to Dad
+    * Add check that Dad is interested in women to make sure the dialogue works
+    * Changed the random target from a flat value to Dad's intoxication.
   * family\_harem\_cms:
     * Replace player.isMale() with !Player.isFemale()
   * family\_peep:

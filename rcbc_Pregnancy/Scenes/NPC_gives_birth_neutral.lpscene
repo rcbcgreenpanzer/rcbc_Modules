@@ -12,6 +12,7 @@ OTHER: none
     Father.dress()
     Father.show(3)
     Mother.setActorVar(tag_Pregnant, 0)
+    children += 1
     If Mother.isRelative() || Father.isRelative() || Mother.isDating() || Father.isDating()
         Kid = Player.generateRelativeMatchRace()
         Kid.setLivingWithPlayer(False)
@@ -27,11 +28,17 @@ OTHER: none
         //    Kid => cousin
         Else
             Kid.setRelativeType(Cousin)
+        Kid:age => 0
+        addNpcRelationship(ParentChild, Mother, Kid)
+        addNpcRelationship(ParentChild, Father, Kid)
+        Kid.matchLastName(Mother)
+        "<Mother.name> has recently given birth to a cute baby, whom she named <Kid.name>. Her baby photos are all over Facebook."
+        SceneEnd()
     Else
         Kid = Mother.generatePersonMatchRace()
-    Kid:age => 0
-    addNpcRelationship(ParentChild, Mother, Kid)
-    addNpcRelationship(ParentChild, Father, Kid)
-    Kid.matchLastName(Mother)
-    "<Mother.name> has recently given birth to a cute baby, whom she named <Kid.name>. Her baby photos are all over Facebook."
-    SceneEnd()
+        Kid:age => 0
+        addNpcRelationship(ParentChild, Mother, Kid)
+        addNpcRelationship(ParentChild, Father, Kid)
+        Kid.matchLastName(Mother)
+        "<Mother.name> has recently given birth to a cute baby, whom she named <Kid.name>. Her baby photos are all over Facebook."
+        SceneEnd()

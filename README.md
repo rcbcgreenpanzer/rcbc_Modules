@@ -88,6 +88,10 @@ Changes to base mods:
   * creepy\_relative\_watches:
     * Replace condition that we haven't had sex with that their age must be at
       least the player's.
+  * drunk\_dad\_cms:
+    * Swap isInterestedIn() from Player to Dad
+    * Add check that Dad is interested in women to make sure the dialogue works
+    * Changed the random target from a flat value to Dad's intoxication.
   * family\_harem\_cms:
     * Replace player.isMale() with !Player.isFemale()
   * family\_peep:
@@ -131,6 +135,8 @@ Changes to base mods:
 * vin\_NTR:
   * boss\_asks\_impregnate\_cms:
     * Add check that the boss can impregnate and dating can be impregnated.
+    * Adjust logic so that the boss still asks to impregnate your partner if
+      you've previously agreed to share.
   * dating\_cheating\_family\_cms:
     * Add logic for open relationship using relative\_asks\_cms
   * dating\_cheating\_family\_shower\_cms:
