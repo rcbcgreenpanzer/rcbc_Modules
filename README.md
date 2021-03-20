@@ -1,6 +1,17 @@
 # rcbc\_Tweaks
 RCBC's tweaks to various scenes.
 
+## Changelog 3.23:
+* vin\_Base:
+  * job\_interview:
+    * Merge update from upstream resetting PlayThing tag on getting hired.
+* vin\_Incest:
+  * incest\_cherry\_boy\_cms:
+    * Merge update from upstream setting actor tags for repeat scene.
+* vin\_Pregnancy:
+  * checkup\_drive:
+    * Remove due to upstream fixing the bug.
+
 ## INSTALL:
   Copy to LifePlay/Content/Modules/
 
@@ -163,8 +174,6 @@ Changes to base mods:
     * Consolidate conditions so only one call to Random() is made
     * Add more stats to the mix
     * Expand guest conditions to allow trans characters.
-  * checkup\_drive:
-    * Replace Else with Elseif
   * dildo\_impregnate\_cms:
     * Prevent scene from firing is actor is already pregnant.
     * Add shorter timeout when you choose to participate.

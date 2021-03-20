@@ -1,6 +1,7 @@
 # rcbc\_Tweak\_Bestiality
 RCBC's tweaks to vin\_Bestiality
 
+## Contents:
 * Scenes:
   * bestiality\_cheater\_cuckold\_impregnate:
     * Replace fertility monkeying with directly calling impregnate().

@@ -1,6 +1,11 @@
 # rcbc\_Tweaks
 RCBC's tweaks to various scenes.
 
+## Changelog 3.23:
+* incest\_cherry\_boy\_cms:
+  * Merge update from upstream setting actor tags for repeat scene.
+
+## Contents:
 * Scenes:
   * caught\_family\_masturbating:
     * Adapt sections of Ravenger's caught\_family\_Fertile scene, edited for

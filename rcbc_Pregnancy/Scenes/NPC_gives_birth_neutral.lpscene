@@ -15,7 +15,7 @@ OTHER: none
     children += 1
     If Mother.isRelative() || Father.isRelative() || Mother.isDating() || Father.isDating()
         Kid = Player.generateRelativeMatchRace()
-        Kid.setLivingWithPlayer(False)
+        Kid.setLivingWithPlayer(Mother.livesWithPlayer())
         If Mother.isRelativeType(Parent) || (Father.isValid() && Father.isRelativeType(Parent))
             Kid.setRelativeType(Sibling)
         Elseif Mother.isDating() || Father.isDating()
@@ -28,10 +28,10 @@ OTHER: none
         //    Kid => cousin
         Else
             Kid.setRelativeType(Cousin)
-        Kid:age => 0
         addNpcRelationship(ParentChild, Mother, Kid)
         addNpcRelationship(ParentChild, Father, Kid)
         Kid.matchLastName(Mother)
+        Kid:age => 0
         "<Mother.name> has recently given birth to a cute baby, whom she named <Kid.name>. Her baby photos are all over Facebook."
         SceneEnd()
     Else

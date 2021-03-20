@@ -298,6 +298,7 @@ OTHER: none
                         moveJobs()
                         Salary.setSalary()
                         Boss.setBoss()
+                        Plaything.setGlobal(0)
                         mood += 100
                         timeOut(5000, performance_review)
                         SleepingWithBoss.setGlobal(0)

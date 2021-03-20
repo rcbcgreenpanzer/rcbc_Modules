@@ -1,6 +1,7 @@
 # rcbc\_NTR
 RCBC's tweaks to vin\_NTR
 
+## Contents:
 * Scenes:
   * boss\_asks\_impregnate\_cms:
     * Add check that the boss can impregnate and dating can be impregnated.

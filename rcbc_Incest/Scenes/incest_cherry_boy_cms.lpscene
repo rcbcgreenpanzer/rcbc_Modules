@@ -45,7 +45,9 @@ OTHER: !Player.isFemale()
                 Actor2.setWantsBabies(true)
                 If Impregnating
                     Actor.impregnate(Actor2)
-                    "Looks like <Actor.name> is ovulating. She must be highly fertile tonight." 
+                    "Looks like <Actor.name> is ovulating. She must be highly fertile tonight."
+                    Actor.setActorVar(tag_incest_cherry_boy_cms_preg, 1)
+                    Actor2.setActorVar(tag_incest_cherry_boy_cms_impreg, 1)
                 Endif
             Else
                 Impregnating = false

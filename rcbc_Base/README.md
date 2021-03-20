@@ -1,6 +1,11 @@
 # rcbc\_Tweak\_Base
 RCBC's tweaks to vin\_Base
 
+## Changelog 3.23:
+* job\_interview:
+  * Merge update from upstream resetting PlayThing tag on getting hired.
+
+## Contents:
 * Scenes:
   * art\_discussion\_family:
     * Family doesn't judge you for knowing less

@@ -1,6 +1,7 @@
 # rcbc\_Poly
 RCBC's edits to vin\_Polyamorous
 
+## Contents:
 * polies\_dress:
   * Replace same gender criteria for either both male or both not male.
 * poly\_fucks\_poly:

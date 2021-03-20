@@ -1,6 +1,11 @@
 # rcbc\_Pregnancy
 RCBC's edits to vin\_Pregnancy
 
+## Changelog 3.23:
+* checkup\_drive:
+  * Remove due to upstream fixing the bug.
+
+## Contents:
 * breeding\_party\_cms:
   * Remove sb\_Better\_Pregnancy dependency
   * Adjust verbiage to reflect the aim to get the player pregnant.
@@ -11,8 +16,6 @@ RCBC's edits to vin\_Pregnancy
   * Consolidate conditions so only one call to Random() is made
   * Add more stats to the mix
   * Expand guest conditions to allow trans characters.
-* checkup\_drive:
-  * Replace Else with Elseif
 * dildo\_impregnate\_cms:
   * Prevent scene from firing is actor is already pregnant.
   * Add shorter timeout when you choose to participate.
