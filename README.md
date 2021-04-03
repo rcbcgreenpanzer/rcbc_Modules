@@ -34,6 +34,8 @@ Changes to base mods:
     * Expand conditions for the player's partner to take part.
     * Add option for mutual impregnation when both the player and kid are
       trans.
+  * dating\_jealouscutcontacts:
+    * Prevent scene from firing in an open relationship.
   * dating\_sleeping\_sex:
     * Remove restriction on same gender partners
     * Give trans characters an equal chance to be on either side.
@@ -210,7 +212,9 @@ Changes to base mods:
       * Sibling (either parent is also your parent)
       * Stepchild (either parent is dating you)
       * Stepsibling (either parent is your stepparent)
-      * Cousin (temporary default)
+      * ParentSibling (either parent is your grandparent)
+      * Cousin (either parent is your parentsibling)
+      * Cousin (default catchall)
   * player\_gives\_birth:
     * Rename variables to keep who is who straight
     * Add both the real father and fake father if they are different.

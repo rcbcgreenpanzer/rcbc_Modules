@@ -22,10 +22,10 @@ OTHER: none
             Kid.setRelativeType(Stepchild)
         Elseif Mother.isRelativeType(Stepparent) || Father.isRelativeType(Stepparent)
             Kid.setRelativeType(Stepsibling)
-        // Elseif either is a grandparent:
-        //    Kid => aunt/uncle
-        // Elseif either is an aunt/uncle:
-        //    Kid => cousin
+        Elseif Mother.isRelativeType(Grandparent) || Father.isRelativeType(Grandparent)
+            Kid.setRelativeType(ParentSibling)
+        Elseif Mother.isRelativeType(ParentSibling) || Father.isRelativeType(ParentSibling)
+            Kid.setRelativeType(Cousin)
         Else
             Kid.setRelativeType(Cousin)
         addNpcRelationship(ParentChild, Mother, Kid)

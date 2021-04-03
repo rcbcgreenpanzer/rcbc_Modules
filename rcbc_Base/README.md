@@ -23,6 +23,8 @@ RCBC's tweaks to vin\_Base
     * Expand conditions for the player's partner to take part.
     * Add option for mutual impregnation when both the player and kid are
       trans.
+  * dating\_jealouscutcontacts:
+    * Prevent scene from firing in an open relationship.
   * dating\_sleeping\_sex:
     * Remove restriction on same gender partners
     * Give trans characters an equal chance to be on either side.

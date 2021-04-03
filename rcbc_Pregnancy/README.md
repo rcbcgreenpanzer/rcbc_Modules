@@ -52,7 +52,9 @@ RCBC's edits to vin\_Pregnancy
     * Sibling (either parent is also your parent)
     * Stepchild (either parent is dating you)
     * Stepsibling (either parent is your stepparent)
-    * Cousin (temporary default)
+    * ParentSibling (either parent is your grandparent)
+    * Cousin (either parent is your parentsibling)
+    * Cousin (default catchall)
 * player\_gives\_birth:
   * Rename variables to keep who is who straight
   * Add both the real father and fake father if they are different.
