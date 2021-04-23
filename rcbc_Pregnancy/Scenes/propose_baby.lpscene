@@ -6,7 +6,7 @@ OTHER: none
 
     SceneStart()
     Player:: "Baby, maybe it's time we should start trying for a baby together."
-    If Actor:attractiontoplayer > 40
+    If (Actor:attractiontoplayer + Actor:rapportwithplayer) > 60
         Actor:: "Oh baby, I've been thinking the same thing ... Yes, let's have a baby together."
         If !Actor.isMale()
             Actor.setWantsBabies()

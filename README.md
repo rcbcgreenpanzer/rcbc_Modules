@@ -1,16 +1,27 @@
 # rcbc\_Tweaks
 RCBC's tweaks to various scenes.
 
-## Changelog 3.23:
+## Changelog 4.02:
+* Overall:
+  * Reupload with fixed line endings
 * vin\_Base:
-  * job\_interview:
-    * Merge update from upstream resetting PlayThing tag on getting hired.
-* vin\_Incest:
-  * incest\_cherry\_boy\_cms:
-    * Merge update from upstream setting actor tags for repeat scene.
-* vin\_Pregnancy:
-  * checkup\_drive:
-    * Remove due to upstream fixing the bug.
+  * nude\_draw\_cms:
+    * Rework actor generation and pronouns to support a transwoman art teacher.
+  * show\_npc\_porn\_cms:
+    * Opened previously ciswomen only roles to transwomen.
+    * Move NonCon check under the straight/lesbian decision.
+  * sucked\_by\_vampire\_cms:
+    * Hoist sucked test up a level so the initial branch works.
+* vin\_Bestiality:
+  * catch\_neighbour\_cms:
+    * Change gender conditions to allow transwomen.
+    * Attempt to grab an existing neighbour first, then make new ones.
+    * Hardcode Actor2 some stats to make sure it doesn't hate everything.
+  * gf\_suggests\_cms:
+    * Swap ciswomen-only conditions to allow transwomen.
+    * Make a random check easier to always succeed.
+  * undercover\_cop\_cms:
+    * Player.isFemale() -> !Player.isMale()
 
 ## INSTALL:
   Copy to LifePlay/Content/Modules/
@@ -54,6 +65,13 @@ Changes to base mods:
     * Family doesn't judge you for knowing less
     * If you know less they inform you about things
     * If you know more you inform them about things
+  * nude\_draw\_cms:
+    * Rework actor generation and pronouns to support a transwoman art teacher.
+  * show\_npc\_porn\_cms:
+    * Opened previously ciswomen only roles to transwomen.
+    * Move NonCon check under the straight/lesbian decision.
+  * sucked\_by\_vampire\_cms:
+    * Hoist sucked test up a level so the initial branch works.
   * surprise\_for\_dating\_gb:
     * Loosen invitation restrictions to allow trans characters.
   * technology\_discussion\_family:
@@ -65,8 +83,17 @@ Changes to base mods:
     * Replace fertility monkeying with directly calling impregnate().
   * bestiality\_cheater\_cuckold\_impregnate\_h:
     * Replace fertility monkeying with directly calling impregnate().
+  * catch\_neighbour\_cms:
+    * Change gender conditions to allow transwomen.
+    * Attempt to grab an existing neighbour first, then make new ones.
+    * Hardcode Actor2 some stats to make sure it doesn't hate everything.
+  * gf\_suggests\_cms:
+    * Swap ciswomen-only conditions to allow transwomen.
+    * Make a random check easier to always succeed.
   * pet\_care\_cms:
     * Add openRelationship() as a shortcut around the stat check.
+  * undercover\_cop\_cms:
+    * Player.isFemale() -> !Player.isMale()
 * vin\_Incest:
   * caught\_family\_masturbating:
     * Adapt sections of Ravenger's caught\_family\_Fertile scene, edited for

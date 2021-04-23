@@ -11,7 +11,7 @@ OTHER: none
         "I'm not fertile at all to get  pregnant ..."
     Else
         Actor = generatePersonTemporary()
-        While Actor.isFemale()
+        While Actor.isFemale() || !Actor.isInterestedIn(Player)
             Actor = generatePersonTemporary()
         Endwhile
         secondScreen(Actor)

@@ -1,9 +1,14 @@
 # rcbc\_Tweak\_Base
 RCBC's tweaks to vin\_Base
 
-## Changelog 3.23:
-* job\_interview:
-  * Merge update from upstream resetting PlayThing tag on getting hired.
+## Changelog 4.02:
+* nude\_draw\_cms:
+  * Rework actor generation and pronouns to support a transwoman art teacher.
+* show\_npc\_porn\_cms:
+  * Opened previously ciswomen only roles to transwomen.
+  * Move NonCon check under the straight/lesbian decision.
+* sucked\_by\_vampire\_cms:
+  * Hoist sucked test up a level so the initial branch works.
 
 ## Contents:
 * Scenes:
@@ -43,6 +48,13 @@ RCBC's tweaks to vin\_Base
     * Family doesn't judge you for knowing less
     * If you know less they inform you about things
     * If you know more you inform them about things
+  * nude\_draw\_cms:
+    * Rework actor generation and pronouns to support a transwoman art teacher.
+  * show\_npc\_porn\_cms:
+    * Opened previously ciswomen only roles to transwomen.
+    * Move NonCon check under the straight/lesbian decision.
+  * sucked\_by\_vampire\_cms:
+    * Hoist sucked test up a level so the initial branch works.
   * surprise\_for\_dating\_gb:
     * Loosen invitation restrictions to allow trans characters.
   * technology\_discussion\_family:
