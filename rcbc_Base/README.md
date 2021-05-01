@@ -1,14 +1,11 @@
 # rcbc\_Tweak\_Base
 RCBC's tweaks to vin\_Base
 
-## Changelog 4.02:
-* nude\_draw\_cms:
-  * Rework actor generation and pronouns to support a transwoman art teacher.
-* show\_npc\_porn\_cms:
-  * Opened previously ciswomen only roles to transwomen.
-  * Move NonCon check under the straight/lesbian decision.
-* sucked\_by\_vampire\_cms:
-  * Hoist sucked test up a level so the initial branch works.
+## Changelog 4.02.1:
+* music\_discussion\_family:
+* news\_discussion\_family:
+* technology\_discussion\_family:
+  * Fix missing Endif
 
 ## Contents:
 * Scenes:

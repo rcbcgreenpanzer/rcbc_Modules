@@ -14,7 +14,7 @@ OTHER: none
             Actor.show(2)
             Actor.setActorVar(tag_Pregnant, 0)
             Actor2 = Player.generateRelativeMatchRace()
-            Actor.setRelativeType(Child)
+            Actor2.setRelativeType(Child)
             Actor2:age => 0
             addNpcRelationship(ParentChild, Actor, Actor2)
             addNpcRelationship(ParentChild, Actor3, Actor2)

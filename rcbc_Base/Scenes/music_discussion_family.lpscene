@@ -24,6 +24,7 @@ OTHER: isAtHome() && Random(0, 200) < music
         Elseif Actor:music > music
             "My <Actor.relationship> pointed me towards a new artist."
             music += Random(0, 2)
+        Endif
     Endif
     
     SceneEnd()

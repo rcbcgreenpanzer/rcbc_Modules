@@ -1,9 +1,13 @@
 # rcbc\_Pregnancy
 RCBC's edits to vin\_Pregnancy
 
-## Changelog 3.23:
-* checkup\_drive:
-  * Remove due to upstream fixing the bug.
+## Changelog 4.02.1:
+* look\_like\_you:
+  * Remove whitespace from whitespace-only lines
+* NPC\_gives\_birth:
+  * Fix wrong actor calling setRelativeType().
+* NPC\_gives\_birth\_neutral:
+  * Reorder logic to prioritize blood relations over step-.
 
 ## Contents:
 * breeding\_party\_cms:

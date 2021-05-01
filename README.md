@@ -1,27 +1,19 @@
 # rcbc\_Tweaks
 RCBC's tweaks to various scenes.
 
-## Changelog 4.02:
-* Overall:
-  * Reupload with fixed line endings
+## Changelog 4.02.1:
 * vin\_Base:
-  * nude\_draw\_cms:
-    * Rework actor generation and pronouns to support a transwoman art teacher.
-  * show\_npc\_porn\_cms:
-    * Opened previously ciswomen only roles to transwomen.
-    * Move NonCon check under the straight/lesbian decision.
-  * sucked\_by\_vampire\_cms:
-    * Hoist sucked test up a level so the initial branch works.
-* vin\_Bestiality:
-  * catch\_neighbour\_cms:
-    * Change gender conditions to allow transwomen.
-    * Attempt to grab an existing neighbour first, then make new ones.
-    * Hardcode Actor2 some stats to make sure it doesn't hate everything.
-  * gf\_suggests\_cms:
-    * Swap ciswomen-only conditions to allow transwomen.
-    * Make a random check easier to always succeed.
-  * undercover\_cop\_cms:
-    * Player.isFemale() -> !Player.isMale()
+  * music\_discussion\_family:
+  * news\_discussion\_family:
+  * technology\_discussion\_family:
+    * Fix missing Endif
+* vin\_Pregnancy:
+  * look\_like\_you:
+    * Remove whitespace from whitespace-only lines
+  * NPC\_gives\_birth:
+    * Fix wrong actor calling setRelativeType().
+  * NPC\_gives\_birth\_neutral:
+    * Reorder logic to prioritize blood relations over step-.
 
 ## INSTALL:
   Copy to LifePlay/Content/Modules/

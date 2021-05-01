@@ -24,6 +24,7 @@ OTHER: isAtHome() && Random(0, 200) < intelligence
         Elseif Actor:intelligence > intelligence
             "My <Actor.relationship> brought me up to date on some details of the new ..."
             intelligence += Random(0, 2)
+        Endif
     Endif
     
     SceneEnd()
