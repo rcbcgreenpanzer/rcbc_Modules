@@ -1,43 +1,43 @@
 WHAT: all
 WHERE: home
 WHEN: 19 - 3
-WHO: Actor = getRelative(Parent); If Actor.isMale() && Actor.livesWithPlayer() && Actor.isInterestedIn(Player) && Actor:incest > 20 && (Actor.isIntrestedInWomen() || Actor.isInterestedInTrans())
+WHO: Actor = getRelative(Parent); If !Actor.isFemale() && Actor.livesWithPlayer() && Actor.isInterestedIn(Player) && Actor:incest > 20 && (Actor.isIntrestedInWomen() || Actor.isInterestedInTrans()) && (!Actor.hasRelationship(Dating, Spouse) || Actor.hasRelationship(Poly))
 OTHER: isAtHome() && Random(0, 100) < Actor:intoxication
 
     SceneStart()
     setBackgroundCustom(livingroom)
     Actor.dress()
     Actor.show()
-    "My dad came back late today, smelling of alcohol and barely able to walk. He's completely drunk."
-    "He must have had a very bad day."
-    0:: "Just let him rest"
+    "My <Actor.dad_or_mom> came back late today, smelling of alcohol and barely able to walk. <Actor.He_or_She>'s completely drunk."
+    "<Actor.He_or_She> must have had a very bad day."
+    0:: "Just let <Actor.him_or_her> rest"
     1:: "Ask what happened"
     
     If 0
         "It's best not to get involved."
-        "Dad went straight to his bedroom. Hopefully, he'll be fine and sober in the morning."
+        "<Actor.Dad_or_Mom> went straight to <Actor.his_or_her> bedroom. Hopefully, <Actor.he_or_she>'ll be fine and sober in the morning."
     Else
-        "I decided to ask him what's going on and consoled him."
+        "I decided to ask <Actor.him_or_her> what's going on and consoled <Actor.him_or_her>."
         Actor(Crying):: "Am I that old and disgusting already?"
-        "Apparently, he was just trying to be friendly to a hot colleague today and ended up getting a sexual harassment warning from HR."
+        "Apparently, <Actor.he_or_she> was just trying to be friendly to a hot colleague today and ended up getting a sexual harassment warning from HR."
         Actor(Angry):: "She was the office slut too! I know she's beeen sleeping with other guys in the office ..."
         Actor(Sad):: "Younger ... more handsome guys."
-        0:: "Be careful next time, Dad!"
+        0:: "Be careful next time, <Actor.Dad_or_Mom>!"
         1:: "You're still very handsome yourself"
         
         If 0
             Player:: "Stay away from her next time, Dad. Sexual harassment is no joke. You could get fired!"
         Else
             Player:: "What a stupid bimbo. She doesn't appreciate how good-looking you still are."
-            0:: "Just console him"
+            0:: "Just console <Actor.him_or_her>"
             1:: "Prove it with my body"
             
             If 0
                 Actor:: "That's good to hear. I feel a lot better now."
             Else
                 AnimatePair(Player, Actor, Kissing)
-                "I started caressing his thigh, clearly showing my admiration."
-                "Maybe he's just too drunk, or maybe he's always fantasized about this, but one thing leads to another really quickly after that."
+                "I started caressing <Actor.his_or_her> thigh, clearly showing my admiration."
+                "Maybe <Actor.he_or_she>'s just too drunk, or maybe <Actor.he_or_she>'s always fantasized about this, but one thing leads to another really quickly after that."
                 Sex(Actor, Player)
                 Actor:incest += 50
             Endif

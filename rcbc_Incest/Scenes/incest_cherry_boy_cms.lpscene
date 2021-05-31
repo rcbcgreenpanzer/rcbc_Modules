@@ -1,9 +1,9 @@
 WHAT: all
 WHERE: all
-WHEN: 16-20
+WHEN: 11-20
 WHO: Actor2 = getRelative(Child, StepChild); Actor = Actor2.getRelatedPerson(ParentChild); If Actor2.isVirgin() && !Actor.isMale() && !Actor2.isFemale()
 OTHER: !Player.isFemale()
-    
+
     SceneStart()
     secondScreen(Actor)
     Actor.dress()
@@ -72,4 +72,4 @@ OTHER: !Player.isFemale()
         Endif
     Endif
     SceneEnd()
-    timeout(5000, incest_cherry_boy_cms)
+    timeout(900, incest_cherry_boy_cms)

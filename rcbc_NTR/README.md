@@ -1,6 +1,11 @@
 # rcbc\_NTR
 RCBC's tweaks to vin\_NTR
 
+## Changelog 4.0s.0:
+* night\_with\_colleagues\_cms:
+  * Attempt to grab an already generated colleague before generating someone new.
+  * Make the colleague permament
+
 ## Contents:
 * Scenes:
   * boss\_asks\_impregnate\_cms:
@@ -17,3 +22,6 @@ RCBC's tweaks to vin\_NTR
   * owned\_ntr\_cms:
     * Replace isFemale() criteria with !isMale()
     * Replace Player.isMale() with !Player.isFemale()
+  * night\_with\_colleagues\_cms:
+    * Attempt to grab an already generated colleague before generating someone new.
+    * Make the colleague permament

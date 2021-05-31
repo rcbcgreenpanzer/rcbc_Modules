@@ -1,9 +1,34 @@
 # rcbc\_Tweaks
 RCBC's tweaks to various scenes.
 
-## Changelog 3.23:
-* incest\_cherry\_boy\_cms:
-  * Merge update from upstream setting actor tags for repeat scene.
+## Changelog 4.0s.0:
+  * drunk\_dad\_cms:
+    * Expand conditions:
+      * Character can be either male or trans, with dialogue changed to reflect.
+    * New Conditions:
+      * Character either doesn't have a partner or is in a polyamorous
+        relationship.
+  * family\_incest\_erotica:
+    * Lowered the max perversion requirement and raised the max incest
+  * family\_incest\_game:
+    * Lowered the max perversion requirement and added a max incest
+  * family\_incest\_porn:
+    * Added a max incest
+  * help\_family\_practice:
+    * Combined random stat checks into one, replaced interpersonal with
+      perversion, and removed redundant Random() calls.
+    * Increased Actor2's perversion when increasing their incest.
+  * incest\_cherry\_boy\_cms:
+    * Expanded WHEN by a couple hours
+    * Lowered timeout (It's already limited by an external factor.)
+  * incest\_cherry\_boy\_repeat\_cms:
+    * Let Actor2 be trans
+  * incest\_owned:
+    * Ensure the actors parent/child
+    * Let Actor2 be trans
+    * Raise the minimum and lower the maximum masochism to proc
+    * Trans players can go through either branch of the scene (depending on
+      stats)
 
 ## Contents:
 * Scenes:
@@ -44,8 +69,16 @@ RCBC's tweaks to various scenes.
     * Swap isInterestedIn() from Player to Dad
     * Add check that Dad is interested in women to make sure the dialogue works
     * Changed the random target from a flat value to Dad's intoxication.
+    * Character can be either male or trans, with dialogue changed to reflect.
+    * Character either doesn't have a partner or is in a polyamorous relationship.
   * family\_harem\_cms:
     * Replace player.isMale() with !Player.isFemale()
+  * family\_incest\_erotica:
+    * Lowered the max perversion requirement and raised the max incest
+  * family\_incest\_game:
+    * Lowered the max perversion requirement and added a max incest
+  * family\_incest\_porn:
+    * Added a max incest
   * family\_peep:
     * Bypass stat check if you've already had sex.
   * family\_sit\_on\_lap:
@@ -61,10 +94,23 @@ RCBC's tweaks to various scenes.
     * Open criteria from siblings/cousins to any relative.
   * help\_family\_practice:
     * Replace !Player.isDating() with (!Player.isDating || openRelationship())
+    * Combined random stat checks into one, replaced interpersonal with
+      perversion, and removed redundant Random() calls.
+    * Increased Actor2's perversion when increasing their incest.
   * incest\_breakup\_dating:
     * Trigger based on the difference of the actors' incest stats.
   * incest\_cherry\_boy\_cms:
     * Replace gender checks to allow trans characters in either role.
+    * Expanded WHEN by a couple hours
+    * Lowered timeout (It's already limited by an external factor.)
+  * incest\_cherry\_boy\_repeat\_cms:
+    * Let Actor2 be trans
+  * incest\_owned:
+    * Ensure the actors parent/child
+    * Let Actor2 be trans
+    * Raise the minimum and lower the maximum masochism to proc
+    * Trans players can go through either branch of the scene (depending on
+      stats)
   * siblings\_gangbang\_cms:
     * Replace gender checks to allow trans characters in either role.
     * Replace "brother" with "sibling"

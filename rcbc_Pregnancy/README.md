@@ -1,13 +1,10 @@
 # rcbc\_Pregnancy
 RCBC's edits to vin\_Pregnancy
 
-## Changelog 4.02.1:
-* look\_like\_you:
-  * Remove whitespace from whitespace-only lines
-* NPC\_gives\_birth:
-  * Fix wrong actor calling setRelativeType().
-* NPC\_gives\_birth\_neutral:
-  * Reorder logic to prioritize blood relations over step-.
+## Changelog 4.0s.0:
+* prenatal\_drive:
+  * Fix broken branch so that "Just go home" does so.
+  * Expand couple generation so that the father can be trans.
 
 ## Contents:
 * breeding\_party\_cms:

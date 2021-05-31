@@ -1,0 +1,72 @@
+WHAT: all
+WHERE: all
+WHEN: 0-24
+WHO: Actor2 = getRelative(Child, StepChild); Actor = Actor2.getRelatedPerson(ParentChild); If Actor.isDating() && !Actor2.isFemale() && [[!Actor.isMale() && Random(90, 100) < masochist] || [!Player.isMale() && Random(90, 100) < Actor:masochist]] && Actor.isMarried()
+OTHER: isModEnabled(vin_NTR) && isPlayerMarried()
+
+    // Basically what the Incest Owned is , First you decide The Son takes over as Husband if playing as Male or Female as your New Spouse the same also applies if you are playing as the Son you become Your Mother's New Husband legally .
+    SceneStart()
+    Actor.dress()
+    Actor.show()
+    Actor2.dress()
+    Actor2.show()
+    "My <Actor.husband_or_wife> <Actor.name> and <Actor2.son_or_daughter> <Actor2.name> came to talk to me."
+    If Player.isMale()
+        PlayerCuck = true
+    Elsif Player.isFemale()
+        PlayerCuck = false
+    Else
+        0:: [!Actor.isMale() && 90 < masochist]:: "I'm the biggest cuck out there."
+        1:: [!Player.isMale() && 90 < Actor:masochist]:: "My <Actor.husband_or_wife> is the biggest cuck out there."
+        2:: Nevermind.
+
+        If 0
+            PlayerCuck = true
+        Elseif 1
+            PlayerCuck = false
+        Else
+            SceneEnd()
+        Endif
+    Endif
+    If PlayerCuck
+        "I'm the biggest cuck out there. Should I watch my <Actor2.son_or_daughter> <Actor2.name> fuck my <Actor.husband_or_wife> and take over as <Actor.his_or_her> new <Actor2.husband_or_wife>?"
+        0:: "Yes"
+        1:: "No"
+
+        If 0
+            Sex(Actor2, Actor)
+            Actor.setDatingId()
+            Actor.setActorVar(tag_Married, 0)
+            loseDating()
+            addNpcRelationship(Spouses, Actor2, Actor)
+            "My <Actor2.son_or_daughter> and my <Actor.husband_or_wife> are now married."
+        Endif
+    Else
+        "My <Actor.husband_or_wife> is the biggest cuck out there. Should I ask my <Actor2.son_or_daughter> <Actor2.name> fuck me and take over from <Actor.name> as my new <Actor2.husband_or_wife>?"
+        0:: "Yes"
+        1:: "No"
+        
+        If 0
+            Actor.setDatingId()
+            loseDating()
+            Actor3 = generatePerson()
+            Actor3.setExRelative(Actor2)
+            Actor3.cloneFrom(Actor2)
+            If Actor3:attractiontoplayer < 40
+                Actor3:attrationtoplayer => Random(40, 100)
+            Endif
+            Actor3:incest => 0
+            Actor2.deletePerson()
+            exchangeContact(Actor3)
+            Actor3.setDating()
+            Sex(Actor3, Player)
+            Actor3.blockNpcRelationships()
+            Actor3.setActorVar(tag_Married, 1)
+            getMarried()
+            Actor3.favoritehome(false)
+            Actor3.setLivingWithPlayer(true)
+            "My <Actor3.son_or_daughter> and I are now married."
+        Endif        
+    Endif
+    SceneEnd()
+    timeout(1000, incest_owned)

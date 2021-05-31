@@ -1,11 +1,17 @@
 # rcbc\_Tweak\_Base
 RCBC's tweaks to vin\_Base
 
-## Changelog 4.02.1:
-* music\_discussion\_family:
-* news\_discussion\_family:
-* technology\_discussion\_family:
-  * Fix missing Endif
+## Changelog 4.0s.0:
+  * dating\_colleague:
+    * Always generate two to support later changes
+    * Make one the same gender as the player to ensure at least one satisfies
+      night\_with\_colleagues\_cms's conditions.
+    * Fix typo showing same actor twice
+    * Replace rando sex scene with the two newly-generated coworkers.
+  * goodbye\_companion:
+    * Extend intial check on whether the player walks or gets walked so that
+      characters that are the same gender will vary by masochism. Generally
+      the one with less masochism will be the visitor, but there is a random
 
 ## Contents:
 * Scenes:
@@ -25,11 +31,22 @@ RCBC's tweaks to vin\_Base
     * Expand conditions for the player's partner to take part.
     * Add option for mutual impregnation when both the player and kid are
       trans.
+  * dating\_colleague:
+    * Always generate two to support later changes
+    * Make one the same gender as the player to ensure at least one satisfies
+      night\_with\_colleagues\_cms's conditions.
+    * Fix typo showing same actor twice
+    * Replace rando sex scene with the two newly-generated coworkers.
   * dating\_jealouscutcontacts:
     * Prevent scene from firing in an open relationship.
   * dating\_sleeping\_sex:
     * Remove restriction on same gender partners
     * Give trans characters an equal chance to be on either side.
+  * goodbye\_companion:
+    * Extend intial check on whether the player walks or gets walked so that
+      characters that are the same gender will vary by masochism. Generally
+      the one with less masochism will be the visitor, but there is a random
+      element.
   * job\_interview:
     * Change < into <= in initial difficulty branch
     * Adjust age presets

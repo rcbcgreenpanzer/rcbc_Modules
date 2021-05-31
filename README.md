@@ -1,19 +1,55 @@
 # rcbc\_Tweaks
 RCBC's tweaks to various scenes.
 
-## Changelog 4.02.1:
+## Changelog 4.0s.0:
 * vin\_Base:
-  * music\_discussion\_family:
-  * news\_discussion\_family:
-  * technology\_discussion\_family:
-    * Fix missing Endif
+  * dating\_colleague:
+    * Always generate two to support later changes
+    * Make one the same gender as the player to ensure at least one satisfies
+      night\_with\_colleagues\_cms's conditions.
+    * Fix typo showing same actor twice
+    * Replace rando sex scene with the two newly-generated coworkers.
+  * goodbye\_companion:
+    * Extend intial check on whether the player walks or gets walked so that
+      characters that are the same gender will vary by masochism. Generally
+      the one with less masochism will be the visitor, but there is a random
+      element.
+* vin\_Incest:
+  * drunk\_dad\_cms:
+    * Expand conditions:
+      * Character can be either male or trans, with dialogue changed to reflect.
+    * New Conditions:
+      * Character either doesn't have a partner or is in a polyamorous
+        relationship.
+  * family\_incest\_erotica:
+    * Lowered the max perversion requirement and raised the max incest
+  * family\_incest\_game:
+    * Lowered the max perversion requirement and added a max incest
+  * family\_incest\_porn:
+    * Added a max incest
+  * help\_family\_practice:
+    * Combined random stat checks into one, replaced interpersonal with
+      perversion, and removed redundant Random() calls.
+    * Increased Actor2's perversion when increasing their incest.
+  * incest\_cherry\_boy\_cms:
+    * Expanded WHEN by a couple hours
+    * Lowered timeout (It's already limited by an external factor.)
+  * incest\_cherry\_boy\_repeat\_cms:
+    * Let Actor2 be trans
+  * incest\_owned:
+    * Ensure the actors parent/child
+    * Let Actor2 be trans
+    * Raise the minimum and lower the maximum masochism to proc
+    * Trans players can go through either branch of the scene (depending on
+      stats)
+* vin\_NTR:
+  * night\_with\_colleagues\_cms:
+    * Attempt to grab an already generated colleague before generating someone new.
+    * Make the colleague permament
 * vin\_Pregnancy:
-  * look\_like\_you:
-    * Remove whitespace from whitespace-only lines
-  * NPC\_gives\_birth:
-    * Fix wrong actor calling setRelativeType().
-  * NPC\_gives\_birth\_neutral:
-    * Reorder logic to prioritize blood relations over step-.
+  * prenatal\_drive:
+    * Fix broken branch so that "Just go home" does so.
+    * Expand couple generation so that the father can be trans.
 
 ## INSTALL:
   Copy to LifePlay/Content/Modules/
@@ -42,6 +78,17 @@ Changes to base mods:
   * dating\_sleeping\_sex:
     * Remove restriction on same gender partners
     * Give trans characters an equal chance to be on either side.
+  * dating\_colleague:
+    * Always generate two to support later changes
+    * Make one the same gender as the player to ensure at least one satisfies
+      night\_with\_colleagues\_cms's conditions.
+    * Fix typo showing same actor twice
+    * Replace rando sex scene with the two newly-generated coworkers.
+  * goodbye\_companion:
+    * Extend intial check on whether the player walks or gets walked so that
+      characters that are the same gender will vary by masochism. Generally
+      the one with less masochism will be the visitor, but there is a random
+      element.
   * job\_interview:
     * Change < into <= in initial difficulty branch
     * Adjust age presets
@@ -124,8 +171,16 @@ Changes to base mods:
     * Swap isInterestedIn() from Player to Dad
     * Add check that Dad is interested in women to make sure the dialogue works
     * Changed the random target from a flat value to Dad's intoxication.
+    * Character can be either male or trans, with dialogue changed to reflect.
+    * Character either doesn't have a partner or is in a polyamorous relationship.
   * family\_harem\_cms:
     * Replace player.isMale() with !Player.isFemale()
+  * family\_incest\_erotica:
+    * Lowered the max perversion requirement and raised the max incest
+  * family\_incest\_game:
+    * Lowered the max perversion requirement and added a max incest
+  * family\_incest\_porn:
+    * Added a max incest
   * family\_peep:
     * Bypass stat check if you've already had sex.
   * family\_sit\_on\_lap:
@@ -141,10 +196,23 @@ Changes to base mods:
     * Open criteria from siblings/cousins to any relative.
   * help\_family\_practice:
     * Replace !Player.isDating() with (!Player.isDating || openRelationship())
+    * Combined random stat checks into one, replaced interpersonal with
+      perversion, and removed redundant Random() calls.
+    * Increased Actor2's perversion when increasing their incest.
   * incest\_breakup\_dating:
     * Trigger based on the difference of the actors' incest stats.
   * incest\_cherry\_boy\_cms:
     * Replace gender checks to allow trans characters in either role.
+    * Expanded WHEN by a couple hours
+    * Lowered timeout (It's already limited by an external factor.)
+  * incest\_cherry\_boy\_repeat\_cms:
+    * Let Actor2 be trans
+  * incest\_owned:
+    * Ensure the actors parent/child
+    * Let Actor2 be trans
+    * Raise the minimum and lower the maximum masochism to proc
+    * Trans players can go through either branch of the scene (depending on
+      stats)
   * siblings\_gangbang\_cms:
     * Replace gender checks to allow trans characters in either role.
     * Replace "brother" with "sibling"
@@ -179,6 +247,9 @@ Changes to base mods:
   * owned\_ntr\_cms:
     * Replace isFemale() criteria with !isMale()
     * Replace Player.isMale() with !Player.isFemale()
+  * night\_with\_colleagues\_cms:
+    * Attempt to grab an already generated colleague before generating someone new.
+    * Make the colleague permament
 * vin\_Polyamorous:
   * polies\_dress:
     * Replace same gender criteria for either both male or both not male.
@@ -247,6 +318,9 @@ Changes to base mods:
     * Change the criteria from the one who impregnated you to who you're dating
   * pregnancy\_pact:
     * Expand guest conditions to allow trans characters.
+  * prenatal\_drive:
+    * Fix broken branch so that "Just go home" does so.
+    * Expand couple generation so that the father can be trans.
   * propose\_baby:
     * Change logic for extra non-cishet energy.
   * surrogate:
